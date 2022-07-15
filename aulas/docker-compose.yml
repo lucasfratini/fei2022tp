@@ -15,7 +15,24 @@ services:
       - '5432:5432'
     networks:
       red:  
-
+      
+  backend:
+    image: yiisoftware/yii2-php:7.1-apache
+    volumes:
+      - ./backend/composer/cache:/root/.composer/cache:delegated
+      - ./backend/basic:/app:delegated
+    environment:
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_HOST: postgres
+      DATABASE_USER: ${DATABASE_USER}
+      DATABASE_PASS: ${DATABASE_PASS}
+      PHP_USER_ID: ${USER_UNIX_ID}
+      PRODUCCION: ${PRODUCCION}
+    ports:
+      - 8000:80
+    networks:
+      red:  
+  
   
     
       
