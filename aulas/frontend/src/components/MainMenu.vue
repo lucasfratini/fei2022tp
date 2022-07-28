@@ -3,22 +3,25 @@
     <v-navigation-drawer
     app
     permanent
+    color="#BBDEFB"
+    
     >
       <v-list-item>
         <v-img
           alt="Aulas Logo"
           class="shrink mr-2"
           contain
-          :src="require('../assets/logo.png')"
+          :src="require('../assets/CURZA-logo.png')"
           transition="scale-transition"
-          width="40"
+          width="60"
+                    
         />
         <v-list-item-content>
           <v-list-item-title class="text-h6">
             Aulas Curza
           </v-list-item-title>
           <v-list-item-subtitle>
-            FeI
+            FEI
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -49,9 +52,16 @@
 
     data: () => ({
       items: [
-        { title: 'Home', icon: 'mdi-view-dashboard', to: '/' },
-        { title: 'About', icon: 'mdi-view-dashboard', to: '/about' },
-        { title: 'Formulario de Carga', icon: 'mdi-view-dashboard', to: '/carga' },
+        { title: 'Home', icon : 'mdi-home', to: '/AulasHome' },
+        { title: 'Login', icon: 'mdi-login', to: '/AulasLogin' },
+        { title: 'Carreras', icon: 'mdi-town-hall', to: '/AulasCarrera' },
+        { title: 'Materia', icon: 'mdi-school', to: '/AulasMateria' },
+        { title: 'Profesor', icon: 'mdi-account-school', to: '/AulasProfesor' },
+        { title: 'Aula', icon: 'mdi-atlassian', to: '/AulasAulas' },
+        { title: 'Reservar Aula', icon: 'mdi-calendar-month-outline', to: '/AulasReservaAula' },
+        { title: 'Horario de Materias', icon: 'mdi-clock', to: '/AulasHorarioMateria' },
+        { title: 'About', icon: 'mdi-information', to: '/AulasAbout' },
+
         ],
     }),
     mounted(){

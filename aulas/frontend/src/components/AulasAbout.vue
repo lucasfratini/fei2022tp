@@ -1,21 +1,15 @@
 <template>
-    <div>
-        <h1>About</h1>
-        <router-link to="/">Go to Home</router-link>
-        {{ id }}
-    </div>
+<div>
+    <h1>SOBRE NOSOTROS "ABOUT"</h1>
+    <router-link to="/AulasHome">Go to Home</router-link>
+</div>
 </template>
 
-
 <script>
-
 export default {
-    name: 'AulasAbout',
-    computed: {
-        id(){
-            return this.$route.params.id
-        }
-    }
-}
+    name: 'AulasHome',
 
+    components: {
+    },
+}
 </script>
